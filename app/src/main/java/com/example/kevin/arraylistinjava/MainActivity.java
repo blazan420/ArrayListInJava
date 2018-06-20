@@ -50,8 +50,14 @@ public class MainActivity extends AppCompatActivity {
         animals.add(0, "Wolf");
         //outputTheArrayListValuesToTheScreenByUsingEnhancedForLoop(animals, txtArrayListValues);
 
-            animals.remove(2);
+            //animals.remove(2);
             outputTheArrayListValuesToTheScreenByUsingEnhancedForLoop(animals, txtArrayListValues);
+
+            if(animals.contains("Tiger")) {
+                txtArrayListValues.setText("Tiger does exist");
+            } else {
+                txtArrayListValues.setText("Tiger Does not Exist");
+            }
 
 
 
