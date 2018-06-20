@@ -33,12 +33,25 @@ public class MainActivity extends AppCompatActivity {
         animals.add("Fox");
 
         String oldTxtArrayListValues;
-        for (int index = 0; index < animals.size(); index++) {
+        /*for (int index = 0; index < animals.size(); index++) {
 
             oldTxtArrayListValues = txtArrayListValues.getText().toString();
             txtArrayListValues.setText(oldTxtArrayListValues + animals.get(index) + "     ");
 
-        }
+        }*/
+
+        txtArrayListCapacityAfterAddingValues.setText(animals.size() + "");
+
+        animals.add("Dog");
+        txtArrayListCapacityAfterAddingValues.setText(animals.size() + "");
+        //outputTheArrayListValuesToTheScreenByUsingEnhancedForLoop(animals, txtArrayListValues);
+
+
+        animals.add(0, "Wolf");
+        //outputTheArrayListValuesToTheScreenByUsingEnhancedForLoop(animals, txtArrayListValues);
+
+            animals.remove(2);
+            outputTheArrayListValuesToTheScreenByUsingEnhancedForLoop(animals, txtArrayListValues);
 
 
 
@@ -46,4 +59,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void outputTheArrayListValuesToTheScreenByUsingEnhancedForLoop(ArrayList<String> values,
+                                                                          TextView textView) {
+        String oldTxtViewValue;
+        for (String value : values) { //Enhanced for loop
+
+            oldTxtViewValue = textView.getText().toString();
+            textView.setText(oldTxtViewValue + value + "    ");
+        }
+    }
+
+
 }
